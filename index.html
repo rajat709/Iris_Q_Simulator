@@ -1,0 +1,20 @@
+<html>
+<head>
+  <title>Code Input Method</title>
+</head>
+<body>
+  <h1>Code Input Method</h1>
+  <form action="{{ url_for('getprediction')}}" method="post">
+    <textarea name="code" rows="10" cols="50"></textarea><br><br>
+    <button <input type="submit" value="Submit Code">getprediction</button>
+  </form>
+
+   <br>
+   <br>
+   {{ output }}
+
+ </div>
+
+
+</body>
+</html>
