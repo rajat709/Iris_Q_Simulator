@@ -1,20 +1,17 @@
 <html>
-<head>
-  <title>Code Input Method</title>
-</head>
-<body>
-  <h1>Code Input Method</h1>
-  <form action="{{ url_for('execute')}}" method="post">
-    <textarea name="code" rows="10" cols="50"></textarea><br><br>
-    <button type="submit">execute</button>
-  </form>
-
-   <br>
-   <br>
-   {{ output }}
-
- </div>
-
-
-</body>
+  <head>
+    <title>Quantum Circuit Simulator</title>
+  </head>
+  <body>
+    <h1>Quantum Circuit Simulator</h1>
+    <form action="/execute" method="post">
+      <textarea name="code" rows="20" cols="100"></textarea>
+      <br><br>
+      <input type="submit" value="Simulate Circuit">
+    </form>
+    <br><br>
+    {% if output %}
+      <h2>{{ output }}</h2>
+    {% endif %}
+  </body>
 </html>
